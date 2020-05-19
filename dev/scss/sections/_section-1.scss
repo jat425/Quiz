@@ -2,22 +2,22 @@
     Section 1
 ============= */
 
-#section-1{
+#section-1 {
     background-image: url('../img/section-1/hero.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 559px;
 
-    @include md{
+    @include md {
         height: 694px;
     }
 
-    @include lg{
+    @include lg {
         height: 799px;
     }
 
-    @include xl{
+    @include xl {
         height: 959px;
     }
 }

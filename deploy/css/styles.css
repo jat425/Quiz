@@ -444,6 +444,11 @@ footer > div {
 /* =============
     Section 2
 ============= */
+@media (min-width: 1200px) {
+  #section-2 {
+    padding-left: 120px;
+    padding-right: 120px; } }
+
 @media (min-width: 768px) {
   #section-2 #section-2-content {
     display: grid;
@@ -499,7 +504,7 @@ footer > div {
   @media (min-width: 1200px) {
     #section-2 #section-2-content article {
       padding-top: 145px;
-      padding-right: 250px; } }
+      padding-right: 125px; } }
 #section-2 #section-2-content aside {
   grid-area: aside;
   background-image: url("../img/section-2/legs.png");
@@ -560,7 +565,7 @@ footer > div {
         gap: 40px;
         grid-template-rows: repeat(2, 1fr);
         padding-bottom: 40px;
-        grid-template-areas: "g1 g2" "g3 g3"; } }
+        grid-template-areas: "g1 g2" ". g3"; } }
     @media (min-width: 992px) {
       #section-3 #section-3-content ul {
         display: grid;
@@ -571,7 +576,7 @@ footer > div {
         grid-template-areas: "g1 g2 g3"; } }
     @media (min-width: 1200px) {
       #section-3 #section-3-content ul {
-        padding-bottom: 8r0px; } }
+        padding-bottom: 80px; } }
     #section-3 #section-3-content ul li {
       background-color: #ECECEC; }
       #section-3 #section-3-content ul li h2 {
