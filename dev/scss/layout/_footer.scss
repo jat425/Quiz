@@ -2,6 +2,66 @@
     Footer
 ============= */
 
-#footer{
- background-color: $back;
-}
+footer{
+    >div{
+        background-color: $back;
+        text-align: center;
+        padding-top: 43px;
+        padding-bottom: 43px;
+
+        @include md{
+            padding-top: 51px;
+            padding-bottom: 51px;
+        }
+
+        @include lg{
+            text-align: right;
+            padding-top: 62px;
+            padding-bottom: 62px;
+            padding-left: 40px;
+            padding-right: 40px;
+            display: grid;
+        }
+
+        @include xl{
+            padding-left: 150px;
+            padding-right: 150px;
+        }
+
+        i{
+            color: $social;
+            font-size: 27px;
+        }
+
+        ul{
+            display: flex;
+            justify-content: center;
+
+            @include lg{
+                justify-content: flex-start;
+            }
+
+            li{
+                padding-left: 18px;
+            }
+        }
+    
+        #footer-text{
+            color: white;
+            span{
+                color: $orange;
+            }
+            padding-top: 26px;
+
+            @include md{
+                padding-top: 15px;
+            }
+
+            @include lg{
+                padding-top: 0px;
+            }
+            @include xl{
+                padding-top: 0px;
+            }
+        }
+}   }   

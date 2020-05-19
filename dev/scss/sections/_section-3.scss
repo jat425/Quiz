@@ -6,11 +6,18 @@
     h1{
         text-align: center; 
         font-size: rem-calc(35);
+        padding-bottom: 15px;
+
+        @include md{
+            padding-bottom: 31px;
+        }
+
         @include xl{
             padding-top: 40px;
         }
         @include lg{
             font-size: rem-calc(45);
+            padding-bottom: 40px;
         }
     }
 
@@ -35,6 +42,7 @@
             display: grid;
             gap: 20px;
             grid-area: section-3-content;
+            padding-bottom: 32px;
             grid-template-rows: repeat(3, 1fr);
             grid-template-areas: 
             "g1"
@@ -46,9 +54,10 @@
                 grid-area: section-3-content;
                 gap: 40px;
                 grid-template-rows: repeat(2, 1fr);
+                padding-bottom: 40px;
                 grid-template-areas: 
                 "g1 g2"
-                ". g3";
+                "g3 g3";
             }
 
 
@@ -56,9 +65,14 @@
                 display: grid;
                 grid-area: section-3-content;
                 gap: 30px;
+                padding-bottom: 70px;
                 grid-template-rows: repeat(1, 1fr);
                 grid-template-areas: 
                 "g1 g2 g3";
+            }
+
+            @include xl{
+                padding-bottom: 8r0px;
             }
     
     

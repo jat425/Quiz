@@ -318,7 +318,8 @@ template {
     Base
 ============= */
 ul {
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
   ul li {
     list-style: none; }
 
@@ -376,9 +377,52 @@ textarea {
 /* =============
     Footer
 ============= */
-#footer {
-  background-color: #080808; }
-
+footer > div {
+  background-color: #080808;
+  text-align: center;
+  padding-top: 43px;
+  padding-bottom: 43px; }
+  @media (min-width: 768px) {
+    footer > div {
+      padding-top: 51px;
+      padding-bottom: 51px; } }
+  @media (min-width: 992px) {
+    footer > div {
+      text-align: right;
+      padding-top: 62px;
+      padding-bottom: 62px;
+      padding-left: 40px;
+      padding-right: 40px;
+      display: grid; } }
+  @media (min-width: 1200px) {
+    footer > div {
+      padding-left: 150px;
+      padding-right: 150px; } }
+  footer > div i {
+    color: #6a6a6a;
+    font-size: 27px; }
+  footer > div ul {
+    display: flex;
+    justify-content: center; }
+    @media (min-width: 992px) {
+      footer > div ul {
+        justify-content: flex-start; } }
+    footer > div ul li {
+      padding-left: 18px; }
+  footer > div #footer-text {
+    color: white;
+    padding-top: 26px; }
+    footer > div #footer-text span {
+      color: #E1593C; }
+    @media (min-width: 768px) {
+      footer > div #footer-text {
+        padding-top: 15px; } }
+    @media (min-width: 992px) {
+      footer > div #footer-text {
+        padding-top: 0px; } }
+    @media (min-width: 1200px) {
+      footer > div #footer-text {
+        padding-top: 0px; } }
 /* =============
     Section 1
 ============= */
@@ -449,6 +493,13 @@ textarea {
       padding-bottom: 20px;
       padding-left: 40px;
       padding-right: 40px; } }
+  @media (min-width: 992px) {
+    #section-2 #section-2-content article {
+      padding-top: 141px; } }
+  @media (min-width: 1200px) {
+    #section-2 #section-2-content article {
+      padding-top: 145px;
+      padding-right: 250px; } }
 #section-2 #section-2-content aside {
   grid-area: aside;
   background-image: url("../img/section-2/legs.png");
@@ -467,13 +518,18 @@ textarea {
 ============= */
 #section-3 h1 {
   text-align: center;
-  font-size: 2.1875rem; }
+  font-size: 2.1875rem;
+  padding-bottom: 15px; }
+  @media (min-width: 768px) {
+    #section-3 h1 {
+      padding-bottom: 31px; } }
   @media (min-width: 1200px) {
     #section-3 h1 {
       padding-top: 40px; } }
   @media (min-width: 992px) {
     #section-3 h1 {
-      font-size: 2.8125rem; } }
+      font-size: 2.8125rem;
+      padding-bottom: 40px; } }
 #section-3 #section-3-content {
   display: grid;
   grid-template-columns: 10px auto 10px;
@@ -494,6 +550,7 @@ textarea {
     display: grid;
     gap: 20px;
     grid-area: section-3-content;
+    padding-bottom: 32px;
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas: "g1" "g2" "g3"; }
     @media (min-width: 768px) {
@@ -502,14 +559,19 @@ textarea {
         grid-area: section-3-content;
         gap: 40px;
         grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: "g1 g2" ". g3"; } }
+        padding-bottom: 40px;
+        grid-template-areas: "g1 g2" "g3 g3"; } }
     @media (min-width: 992px) {
       #section-3 #section-3-content ul {
         display: grid;
         grid-area: section-3-content;
         gap: 30px;
+        padding-bottom: 70px;
         grid-template-rows: repeat(1, 1fr);
         grid-template-areas: "g1 g2 g3"; } }
+    @media (min-width: 1200px) {
+      #section-3 #section-3-content ul {
+        padding-bottom: 8r0px; } }
     #section-3 #section-3-content ul li {
       background-color: #ECECEC; }
       #section-3 #section-3-content ul li h2 {
