@@ -1,0 +1,40 @@
+/* =============
+    Section 3
+============= */
+
+#section-3{
+    display: grid;
+    grid-template-columns: 15px auto 15px;
+    grid-template-areas: ". section-3 .";
+
+    ul{
+        display: grid;
+        gap: 20px;
+        grid-area: section-3;
+        grid-template-rows: repeat(3, 426px);
+        grid-template-areas: 
+        "g1"
+        "g2"
+        "g3";
+
+
+
+        li{
+            img{
+                width: 100%;
+            }
+ 
+            #g1{
+             grid-area: g1;
+            }
+ 
+            #g2{
+             grid-area: g2;
+            }
+ 
+            #g3{
+             grid-area: g3;
+            }
+        }      
+    } 
+}

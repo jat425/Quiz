@@ -1,0 +1,60 @@
+/* =============
+    Section 2
+============= */
+
+#section-2{
+    
+    @include xl{
+        display: grid;
+        grid-template-columns: auto 1200px auto;
+        grid-template-areas: ". section-2-content .";
+    }
+
+
+    #section-2-content{
+
+        background-color: $grey;
+
+         @include md{
+            display: grid;
+            grid-template-columns: 60% auto;
+        }
+
+        @include lg{
+            display: grid;
+            grid-template-columns: 50% auto;
+        }
+
+        #section-2-container{
+            display: grid;
+            grid-template-columns: 10px auto 10px;
+            grid-template-areas: ". section-2-content .";
+        
+            @include md{
+            }
+            @include lg{  
+            }
+
+            #section-2-text{
+                color: $dark;
+                grid-area: section-2;
+                h1{
+                    text-align: center; 
+                }
+            
+
+                padding-top: 44px;
+                padding-bottom: 96px;
+            }
+        }
+    
+        aside{
+            background-image: url('../img/section-2/legs.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 320px;
+        }
+
+    }
+}
