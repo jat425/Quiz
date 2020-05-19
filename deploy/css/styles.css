@@ -376,6 +376,9 @@ textarea {
 /* =============
     Footer
 ============= */
+#footer {
+  background-color: #080808; }
+
 /* =============
     Section 1
 ============= */
@@ -397,58 +400,151 @@ textarea {
 /* =============
     Section 2
 ============= */
-@media (min-width: 1200px) {
-  #section-2 {
+@media (min-width: 768px) {
+  #section-2 #section-2-content {
     display: grid;
-    grid-template-columns: auto 1200px auto;
-    grid-template-areas: ". section-2-content ."; } }
+    grid-template-columns: 70% 30%;
+    grid-template-areas: "article aside"; } }
 
-#section-2 #section-2-content {
-  background-color: #ECECEC; }
+@media (min-width: 992px) {
+  #section-2 #section-2-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "aside article"; } }
+
+#section-2 #section-2-content article {
+  grid-area: article;
+  background-color: #ECECEC;
+  color: #040404;
+  padding-top: 44px;
+  padding-bottom: 96px;
+  padding-left: 10px;
+  padding-right: 10px; }
+  #section-2 #section-2-content article h1 {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 2.1875rem; }
+    @media (min-width: 768px) {
+      #section-2 #section-2-content article h1 {
+        text-align: left; } }
+    @media (min-width: 992px) {
+      #section-2 #section-2-content article h1 {
+        text-align: left;
+        font-size: 2.8125rem; } }
+  #section-2 #section-2-content article p {
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.3125rem; }
+    @media (min-width: 768px) {
+      #section-2 #section-2-content article p {
+        font-size: 1.0625rem;
+        line-height: 1.4375rem; } }
+    @media (min-width: 992px) {
+      #section-2 #section-2-content article p {
+        font-size: 1.25rem;
+        line-height: 1.8125rem; } }
   @media (min-width: 768px) {
-    #section-2 #section-2-content {
-      display: grid;
-      grid-template-columns: 60% auto; } }
+    #section-2 #section-2-content article {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 40px;
+      padding-right: 40px; } }
+#section-2 #section-2-content aside {
+  grid-area: aside;
+  background-image: url("../img/section-2/legs.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 320px; }
+  @media (min-width: 768px) {
+    #section-2 #section-2-content aside {
+      height: 246px; } }
   @media (min-width: 992px) {
-    #section-2 #section-2-content {
-      display: grid;
-      grid-template-columns: 50% auto; } }
-  #section-2 #section-2-content #section-2-container {
-    display: grid;
-    grid-template-columns: 10px auto 10px;
-    grid-template-areas: ". section-2-content ."; }
-    #section-2 #section-2-content #section-2-container #section-2-text {
-      color: #040404;
-      grid-area: section-2;
-      padding-top: 44px;
-      padding-bottom: 96px; }
-      #section-2 #section-2-content #section-2-container #section-2-text h1 {
-        text-align: center; }
-  #section-2 #section-2-content aside {
-    background-image: url("../img/section-2/legs.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 320px; }
-
+    #section-2 #section-2-content aside {
+      height: 600px; } }
 /* =============
     Section 3
 ============= */
-#section-3 {
+#section-3 h1 {
+  text-align: center;
+  font-size: 2.1875rem; }
+  @media (min-width: 1200px) {
+    #section-3 h1 {
+      padding-top: 40px; } }
+  @media (min-width: 992px) {
+    #section-3 h1 {
+      font-size: 2.8125rem; } }
+#section-3 #section-3-content {
   display: grid;
-  grid-template-columns: 15px auto 15px;
-  grid-template-areas: ". section-3 ."; }
-  #section-3 ul {
+  grid-template-columns: 10px auto 10px;
+  grid-template-areas: ". section-3-content ."; }
+  @media (min-width: 768px) {
+    #section-3 #section-3-content {
+      grid-template-columns: 64px auto 64px;
+      grid-template-areas: ". section-3-content ."; } }
+  @media (min-width: 992px) {
+    #section-3 #section-3-content {
+      grid-template-columns: 30px auto 30px;
+      grid-template-areas: ". section-3-content ."; } }
+  @media (min-width: 1200px) {
+    #section-3 #section-3-content {
+      grid-template-columns: 150px auto 150px;
+      grid-template-areas: ". section-3-content ."; } }
+  #section-3 #section-3-content ul {
     display: grid;
     gap: 20px;
-    grid-area: section-3;
-    grid-template-rows: repeat(3, 426px);
+    grid-area: section-3-content;
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas: "g1" "g2" "g3"; }
-    #section-3 ul li img {
-      width: 100%; }
-    #section-3 ul li #g1 {
-      grid-area: g1; }
-    #section-3 ul li #g2 {
-      grid-area: g2; }
-    #section-3 ul li #g3 {
-      grid-area: g3; }
+    @media (min-width: 768px) {
+      #section-3 #section-3-content ul {
+        display: grid;
+        grid-area: section-3-content;
+        gap: 40px;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "g1 g2" ". g3"; } }
+    @media (min-width: 992px) {
+      #section-3 #section-3-content ul {
+        display: grid;
+        grid-area: section-3-content;
+        gap: 30px;
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas: "g1 g2 g3"; } }
+    #section-3 #section-3-content ul li {
+      background-color: #ECECEC; }
+      #section-3 #section-3-content ul li h2 {
+        text-align: center;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        font-size: 1.5rem; }
+        @media (min-width: 992px) {
+          #section-3 #section-3-content ul li h2 {
+            font-size: 1.8rem; } }
+      #section-3 #section-3-content ul li p {
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 1rem;
+        line-height: 1.1875rem; }
+        @media (min-width: 992px) {
+          #section-3 #section-3-content ul li p {
+            font-size: 1.2rem;
+            line-height: 1.4375rem; } }
+      #section-3 #section-3-content ul li h5 {
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: 0.875rem; }
+        @media (min-width: 992px) {
+          #section-3 #section-3-content ul li h5 {
+            font-size: 1.05rem; } }
+      #section-3 #section-3-content ul li img {
+        width: 100%; }
+      #section-3 #section-3-content ul li #g1 {
+        grid-area: g1; }
+      #section-3 #section-3-content ul li #g2 {
+        grid-area: g2; }
+      #section-3 #section-3-content ul li #g3 {
+        grid-area: g3; }

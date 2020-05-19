@@ -3,38 +3,120 @@
 ============= */
 
 #section-3{
-    display: grid;
-    grid-template-columns: 15px auto 15px;
-    grid-template-areas: ". section-3 .";
+    h1{
+        text-align: center; 
+        font-size: rem-calc(35);
+        @include xl{
+            padding-top: 40px;
+        }
+        @include lg{
+            font-size: rem-calc(45);
+        }
+    }
 
-    ul{
+    #section-3-content{
         display: grid;
-        gap: 20px;
-        grid-area: section-3;
-        grid-template-rows: repeat(3, 426px);
-        grid-template-areas: 
-        "g1"
-        "g2"
-        "g3";
+        grid-template-columns: 10px auto 10px;
+        grid-template-areas: ". section-3-content .";
+        @include md{
+            grid-template-columns: 64px auto 64px;
+            grid-template-areas: ". section-3-content .";
+        }
+        @include lg{
+            grid-template-columns: 30px auto 30px;
+            grid-template-areas: ". section-3-content .";
+        }
+        @include xl{
+            grid-template-columns: 150px auto 150px;
+            grid-template-areas: ". section-3-content .";
+        }
+    
+        ul{
+            display: grid;
+            gap: 20px;
+            grid-area: section-3-content;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas: 
+            "g1"
+            "g2"
+            "g3";
+
+            @include md{
+                display: grid;
+                grid-area: section-3-content;
+                gap: 40px;
+                grid-template-rows: repeat(2, 1fr);
+                grid-template-areas: 
+                "g1 g2"
+                ". g3";
+            }
 
 
+            @include lg{
+                display: grid;
+                grid-area: section-3-content;
+                gap: 30px;
+                grid-template-rows: repeat(1, 1fr);
+                grid-template-areas: 
+                "g1 g2 g3";
+            }
+    
+    
+    
+            li{
+                background-color: $grey;
 
-        li{
-            img{
-                width: 100%;
-            }
- 
-            #g1{
-             grid-area: g1;
-            }
- 
-            #g2{
-             grid-area: g2;
-            }
- 
-            #g3{
-             grid-area: g3;
-            }
-        }      
-    } 
+                h2{
+                    text-align: center;
+                    padding-top: 24px;
+                    padding-bottom: 24px;
+                    font-size: rem-calc(24);
+                    @include lg{
+                        font-size: rem-calc(28.8);
+                    }
+                }
+
+                p{
+                    text-align: left;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    font-size: rem-calc(16);
+                    line-height: rem-calc(19);
+                    @include lg{
+                        font-size: rem-calc(19.2);
+                        line-height: rem-calc(23);
+                    }
+                }
+
+                h5{
+                    text-align: left;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    padding-top: 25px;
+                    padding-bottom: 25px;
+                    font-size: rem-calc(14);
+
+                    @include lg{
+                        font-size: rem-calc(16.8);
+                    }
+                }   
+
+                img{
+                    width: 100%;
+                }
+     
+                #g1{
+                 grid-area: g1;
+                }
+     
+                #g2{
+                 grid-area: g2;
+                }
+     
+                #g3{
+                 grid-area: g3;
+                }
+            }      
+        } 
+    }
 }

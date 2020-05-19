@@ -30,6 +30,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/deploy/img/section-1/Start_Button.png": {
+		"ft": 32768,
+		"iS": 3012,
+		"oA": 0,
+		"oAP": "/deploy/img/section-1/Start_Button.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/deploy/img/section-2/legs.png": {
 		"ft": 32768,
 		"iS": 0,
@@ -406,7 +417,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 611177697.345626,
-	"displayValue": "1. In-Class Quiz",
+	"displayValue": "Quiz",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets-unblue",
 	"iconImageWasSetByUser": 0
